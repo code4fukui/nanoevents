@@ -1,5 +1,7 @@
 # Nano Events
 
+> 日本語のREADMEはこちらです: [README.ja.md](README.ja.md)
+
 Simple and tiny event emitter library for JavaScript.
 
 * Only **152 bytes** (minified and gzipped).
@@ -35,7 +37,6 @@ summary //=> 2
        alt="Sponsored by Evil Martians" width="236" height="54">
 </a>
 
-
 ## Table of Contents
 
 * [Install](#install)
@@ -48,13 +49,11 @@ summary //=> 2
 * [Once](#once)
 * [Remove All Listeners](#remove-all-listeners)
 
-
 ## Install
 
 ```sh
 npm install nanoevents
 ```
-
 
 ## TypeScript
 
@@ -77,7 +76,6 @@ emitter.emit('tick')
 emitter.emit('set', 'prop', '1')
 emitter.emit('tick', 2)
 ```
-
 
 ## Mixing to Object
 
@@ -127,7 +125,6 @@ class Ticker {
 }
 ```
 
-
 ## Add Listener
 
 Use `on` method to add listener for specific event:
@@ -162,7 +159,6 @@ emitter.on('print', app.getListener())
 Note: binding with use of the `.bind()` method won’t work as you might expect
 and therefore is not recommended.
 
-
 ## Remove Listener
 
 Methods `on` returns `unbind` function. Call it and this listener
@@ -181,7 +177,6 @@ emitter.emit('tick', 2)
 // Prints nothing
 ```
 
-
 ## Execute Listeners
 
 Method `emit` will execute all listeners. First argument is event name, others
@@ -195,7 +190,6 @@ emitter.emit('tick', 1, 'one')
 // Prints 1, 'one'
 ```
 
-
 ## Events List
 
 You can get used events list by `events` property.
@@ -204,7 +198,6 @@ You can get used events list by `events` property.
 const unbind = emitter.on('tick', () => { })
 emitter.events //=> { tick: [ [Function] ] }
 ```
-
 
 ## Once
 
@@ -226,7 +219,6 @@ class Ticker {
   }
 }
 ```
-
 
 ## Remove All Listeners
 
